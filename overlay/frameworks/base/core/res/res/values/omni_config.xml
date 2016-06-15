@@ -55,4 +55,8 @@
 
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
+
+    <!-- BatteryLED fast charge -->
+   <integer name="config_chargingFastThreshold">1300000</integer>
+
 </resources>
