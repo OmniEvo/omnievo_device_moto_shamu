@@ -256,6 +256,10 @@ on boot
     chown system system /sys/vibrator/pwmvalue
     chmod 0644 /sys/vibrator/pwmvalue
 
+    # Assertive Display
+    chown system system /sys/class/graphics/fb0/ad
+    write /sys/class/graphics/fb0/ad 1
+
 # subsystem ramdump collection
 on property:persist.sys.qc.sub.rdump.on=*
     write /sys/module/subsystem_restart/parameters/enable_ramdumps ${persist.sys.qc.sub.rdump.on}
