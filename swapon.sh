@@ -13,3 +13,8 @@ if [ -e /sys/block/vnswap0/disksize ] ; then
   /system/xbin/mkswap /dev/block/vnswap0
 
   /system/xbin/swapon /dev/block/vnswap0
+
+fi
+
+# - swappiness set to 60 (stock)
+echo 60 > /proc/sys/vm/swappiness
